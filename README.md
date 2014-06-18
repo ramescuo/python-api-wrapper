@@ -16,7 +16,7 @@ You can use MuseScoreAPI without authentication. For example to list the last sc
 
     from MuseScoreAPI import MuseScoreAPI
     api = MuseScoreAPI(client_key="musichackday")
-    api.request('score')
+    r = api.request('score')
     print(r.text)
 
 You can also get OAuth token before with connect.py
@@ -27,7 +27,7 @@ It will store the credentials in credentials.json. And you can then use this tok
 
     from MuseScoreAPI import MuseScoreAPI
     api = MuseScoreAPI("credentials.json")
-    api.request('me')
+    r = api.request('me')
     print(r.text)
 
 Or you can post a score
